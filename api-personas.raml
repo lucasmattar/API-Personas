@@ -1,0 +1,119 @@
+#%RAML 1.0
+types:
+  direccion:
+    properties:
+      calle:
+        example: Example
+        type: string
+      numero:
+        example: Example
+        type: string
+      ciudad:
+        example: Example
+        type: string
+      provincia:
+        example: Example
+        type: string
+  contacto:
+    example:
+      strict: true
+      value:
+        telefono: Example
+        direccion:
+          calle: Example
+          numero: Example
+          ciudad: Example
+          provincia: Example
+        email: Example
+        nombre: Example
+        apellido: Example
+        id: Example
+    properties:
+      id:
+        example: Example
+        type: string
+      nombre:
+        example: Example
+        type: string
+      apellido:
+        example: Example
+        type: string
+      telefono:
+        example: Example
+        type: string
+      email:
+        example: Example
+        type: string
+      direccion:
+        type: direccion
+title: API Personas
+description: API de Personas  de datos de contacto en Salesforce y direcciones en MySQL
+version: v1
+/personas:
+  get:
+    displayName: Lista las Personas en salesforce y base de datos
+    queryParameters:
+      newQueryParameter:
+        example: Example
+        type: string
+    responses:
+      "200":
+        body:
+          application/json:
+            items:
+              type: contacto
+              example:
+                strict: true
+                value:
+                  telefono: "29000002323232"
+                  direccion:
+                    calle: Las Manzanas
+                    numero: "1320"
+                    ciudad: Cipolletti
+                    provincia: Rio Negro
+                  email: lmattar@gmail.com
+                  nombre: Lucas
+                  apellido: Mattar
+                  id: "1"
+      "201": {}
+      "204": {}
+/personas/{id}:
+  get:
+    displayName: Personas por id
+    responses:
+      "200":
+        body:
+          application/json:
+            type: contacto
+            example:
+              strict: true
+              value:
+                telefono: Example
+                direccion:
+                  calle: Example
+                  numero: Example
+                  ciudad: Example
+                  provincia: Example
+                email: Example
+                nombre: Example
+                apellido: Example
+                id: Example
+      "201": {}
+      "204": {}
+      "304": {}
+  uriParameters:
+    idcuenta:
+      example: Example
+      type: string
+mediaType:
+  - application/json
+securitySchemes:
+  SecurityScheme:
+    type: OAuth 2.0
+protocols:
+  - HTTP
+  - HTTPS
+
+
+
+

@@ -1,0 +1,7 @@
+#%Catalog Descriptor 1.0
+projects:
+  - main: api-personas.raml
+    assetId: api-personas
+    version: 1.0.0
+    apiVersion: v1
+    tags: api-flex-cicd
