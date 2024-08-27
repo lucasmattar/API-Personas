@@ -1,10 +1,10 @@
 {
-  "main": "api-personas.raml",
-  "name": "API Personas",
-  "classifier": "raml",
+  "version": "1.0.0",
   "apiVersion": "v1",
   "descriptorVersion": "1.0.0",
-  "groupId": null,
+  "classifier": "raml",
+  "main": "api-personas.raml",
   "assetId": "api-personas",
-  "version": "1.0.0"
+  "groupId": "null",
+  "name": "API Personas"
 }
